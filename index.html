@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Platform</title>
+		<script src="perlin.js"></script>
+		<script src="jQuery.min.js"></script>
+		<style>
+			body,html{
+				background:black;
+				height: 100%;
+				padding:0;
+				margin:0; 
+				font-family:"arial",sans-serif;
+			}
+			#canvas{
+				position:absolute;
+				background: white;
+				opactiy: 100%;
+			}
+			#panel{
+				position:fixed;
+				top:0;
+				left:0;
+			}
+			#panel div{
+				margin:1em;
+				min-height:16px;
+				min-width:72px;
+				padding:2px 1em 2px 1em;
+				border-radius: 5px;
+				background: rgba(255,255,255,0.5);
+				text-align: center;
+			}
+			#panel hr{
+				height: 1px;
+				background: rgba(0,0,0,0.2);
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas">
+			Canvas element not supported!
+		</canvas>
+		<div id="panel">
+			<div id="fps">Loading...</div>
+			<div id="chunks">Map Data</div>
+			<div id="plr">Player</div>
+		</div>
+		<div id="rendered" class="display:none;"></div>
+		<script src="game.js"></script>
+	</body>
+</html>
